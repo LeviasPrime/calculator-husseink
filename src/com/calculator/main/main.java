@@ -1,3 +1,10 @@
+/**
+ * main
+ * 
+ * @author Hussein Kadhum.
+ * @version 1.0 alpha
+ **/
+
 package com.calculator.main;
 import java.awt.EventQueue;
 
@@ -20,9 +27,9 @@ import javax.swing.JTextField;
 public class main {
 
 	private JFrame frmCalculator;
-	private JTextField firstValueField;
-	private JTextField secondValueField;
-	private JTextField resultField;
+	private JTextField firstValueField; 
+	private JTextField secondValueField; 
+	private JTextField resultField; 
 
 	/**
 	 * Launch the application.

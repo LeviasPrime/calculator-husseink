@@ -1,3 +1,10 @@
+/**
+ * CalculatorBasicOperationsInterface
+ * 
+ * @author Hussein Kadhum.
+ * @version 1.0 alpha
+ **/
+
 package com.calculator.interfaces;
 
 public interface CalculatorBasicOperationsInterface {
