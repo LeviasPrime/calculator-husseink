@@ -28,6 +28,7 @@ public class BasicOperations {
 	
 	
 	
+	
 	public void Addition (double firstValue, double secondValue) {
 		setResult(firstValue + secondValue);
 	}

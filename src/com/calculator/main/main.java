@@ -9,6 +9,7 @@ import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
 
+import com.calculator.superclasses.AdvancedOperations;
 import com.calculator.superclasses.BasicOperations;
 
 import javax.swing.JButton;
@@ -18,7 +19,7 @@ import javax.swing.JTextField;
 
 public class main {
 
-	private JFrame frame;
+	private JFrame frmCalculator;
 	private JTextField firstValueField;
 	private JTextField secondValueField;
 	private JTextField resultField;
@@ -31,7 +32,7 @@ public class main {
 			public void run() {
 				try {
 					main window = new main();
-					window.frame.setVisible(true);
+					window.frmCalculator.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -51,45 +52,47 @@ public class main {
 	 */
 	private void initialize() {
 		BasicOperations bo = new BasicOperations();
+		AdvancedOperations ao = new AdvancedOperations();
 		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmCalculator = new JFrame();
+		frmCalculator.setTitle("Calculator");
+		frmCalculator.setBounds(100, 100, 450, 300);
+		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmCalculator.getContentPane().setLayout(null);
 		
-		JLabel lblFirstValue = new JLabel("First Value");
+		JLabel lblFirstValue = new JLabel("First Value or Only Value:");
 		lblFirstValue.setHorizontalAlignment(SwingConstants.LEFT);
 		lblFirstValue.setBackground(UIManager.getColor("Button.background"));
 		lblFirstValue.setBounds(10, 11, 176, 25);
-		frame.getContentPane().add(lblFirstValue);
+		frmCalculator.getContentPane().add(lblFirstValue);
 		
 		firstValueField = new JTextField();
 		firstValueField.setBounds(10, 36, 176, 20);
-		frame.getContentPane().add(firstValueField);
+		frmCalculator.getContentPane().add(firstValueField);
 		firstValueField.setColumns(10);
 		
-		JLabel lblSecondValue = new JLabel("Second Value");
+		JLabel lblSecondValue = new JLabel("Second Value:");
 		lblSecondValue.setHorizontalAlignment(SwingConstants.LEFT);
 		lblSecondValue.setBackground(SystemColor.menu);
 		lblSecondValue.setBounds(10, 67, 176, 25);
-		frame.getContentPane().add(lblSecondValue);
+		frmCalculator.getContentPane().add(lblSecondValue);
 		
 		secondValueField = new JTextField();
 		secondValueField.setColumns(10);
 		secondValueField.setBounds(10, 92, 176, 20);
-		frame.getContentPane().add(secondValueField);
+		frmCalculator.getContentPane().add(secondValueField);
 		
-		JLabel lblResult = new JLabel("Result");
+		JLabel lblResult = new JLabel("Result:");
 		lblResult.setHorizontalAlignment(SwingConstants.LEFT);
 		lblResult.setBackground(SystemColor.menu);
 		lblResult.setBounds(239, 36, 176, 25);
-		frame.getContentPane().add(lblResult);
+		frmCalculator.getContentPane().add(lblResult);
 		
 		resultField = new JTextField();
 		resultField.setEditable(false);
 		resultField.setColumns(10);
 		resultField.setBounds(239, 61, 176, 20);
-		frame.getContentPane().add(resultField);
+		frmCalculator.getContentPane().add(resultField);
 		
 		
 		JButton additionButton = new JButton("+");
@@ -104,7 +107,7 @@ public class main {
 			}
 		});
 		additionButton.setBounds(38, 129, 55, 55);
-		frame.getContentPane().add(additionButton);
+		frmCalculator.getContentPane().add(additionButton);
 		
 		JButton subtractionButton = new JButton("-");
 		subtractionButton.addActionListener(new ActionListener() {
@@ -118,7 +121,7 @@ public class main {
 			}
 		});
 		subtractionButton.setBounds(103, 129, 55, 55);
-		frame.getContentPane().add(subtractionButton);
+		frmCalculator.getContentPane().add(subtractionButton);
 		
 
 		
@@ -134,7 +137,7 @@ public class main {
 			}
 		});
 		divisionButton.setBounds(103, 195, 55, 55);
-		frame.getContentPane().add(divisionButton);
+		frmCalculator.getContentPane().add(divisionButton);
 		
 		JButton multiplicationButton = new JButton("*");
 		multiplicationButton.addActionListener(new ActionListener() {
@@ -148,31 +151,91 @@ public class main {
 			}
 		});
 		multiplicationButton.setBounds(38, 195, 55, 55);
-		frame.getContentPane().add(multiplicationButton);
+		frmCalculator.getContentPane().add(multiplicationButton);
 
 		
-		JButton button_4 = new JButton("uni");
-		button_4.setBounds(369, 129, 55, 55);
-		frame.getContentPane().add(button_4);
+		JButton rootButton = new JButton("\u221A");
+		rootButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.SquareRoot(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		rootButton.setBounds(369, 129, 55, 55);
+		frmCalculator.getContentPane().add(rootButton);
 		
-		JButton button_5 = new JButton("uni");
-		button_5.setBounds(369, 195, 55, 55);
-		frame.getContentPane().add(button_5);
+		JButton tangentButton = new JButton("tan");
+		tangentButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.Tangent(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		tangentButton.setBounds(369, 195, 55, 55);
+		frmCalculator.getContentPane().add(tangentButton);
 		
-		JButton button_6 = new JButton("uni");
-		button_6.setBounds(304, 129, 55, 55);
-		frame.getContentPane().add(button_6);
+		JButton squaredButton = new JButton("x^2");
+		squaredButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.Squared(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		squaredButton.setBounds(304, 129, 55, 55);
+		frmCalculator.getContentPane().add(squaredButton);
 		
-		JButton button_7 = new JButton("uni");
-		button_7.setBounds(304, 195, 55, 55);
-		frame.getContentPane().add(button_7);
+		JButton cosineButton = new JButton("cos");
+		cosineButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.Cosine(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		cosineButton.setBounds(304, 195, 55, 55);
+		frmCalculator.getContentPane().add(cosineButton);
 		
-		JButton btnUni = new JButton("uni");
-		btnUni.setBounds(239, 129, 55, 55);
-		frame.getContentPane().add(btnUni);
+		JButton logarithmButton = new JButton("log");
+		logarithmButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.Logarithm(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		logarithmButton.setBounds(239, 129, 55, 55);
+		frmCalculator.getContentPane().add(logarithmButton);
 		
-		JButton btnUni_1 = new JButton("uni");
-		btnUni_1.setBounds(239, 195, 55, 55);
-		frame.getContentPane().add(btnUni_1);
+		JButton sineButton = new JButton("sin");
+		sineButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					ao.Sine(Double.parseDouble(firstValueField.getText()));
+					resultField.setText(Double.toString(ao.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
+			}
+		});
+		sineButton.setBounds(239, 195, 55, 55);
+		frmCalculator.getContentPane().add(sineButton);
 	}
 }
