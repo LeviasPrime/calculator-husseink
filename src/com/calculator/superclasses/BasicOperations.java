@@ -29,7 +29,19 @@ public class BasicOperations {
 	
 	
 	public void Addition (double firstValue, double secondValue) {
-		setResult(getFirstValue() + getSecondValue());
+		setResult(firstValue + secondValue);
+	}
+	
+	public void Subtraction (double firstValue, double secondValue) {
+		setResult(firstValue - secondValue);
+	}
+	
+	public void Multiplication (double firstValue, double secondValue) {
+		setResult(firstValue * secondValue);
+	}
+	
+	public void Division (double firstValue, double secondValue) {
+		setResult(firstValue / secondValue);
 	}
 
 }

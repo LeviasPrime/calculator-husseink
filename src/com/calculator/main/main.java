@@ -95,12 +95,12 @@ public class main {
 		JButton additionButton = new JButton("+");
 		additionButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//double result = Double.parseDouble(firstValueField.getText()) + Double.parseDouble(secondValueField.getText());
-				//resultField.setText(Double.toString(result));
-				bo.setFirstValue(Double.parseDouble(firstValueField.getText()));
-				bo.setSecondValue(Double.parseDouble(secondValueField.getText()));
-				bo.setResult(bo.getFirstValue() + bo.getSecondValue());
-				resultField.setText(Double.toString(bo.getResult()));
+				try {
+					bo.Addition(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));
+					resultField.setText(Double.toString(bo.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
 			}
 		});
 		additionButton.setBounds(38, 129, 55, 55);
@@ -109,6 +109,12 @@ public class main {
 		JButton subtractionButton = new JButton("-");
 		subtractionButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					bo.Subtraction(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));
+					resultField.setText(Double.toString(bo.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
 			}
 		});
 		subtractionButton.setBounds(103, 129, 55, 55);
@@ -119,6 +125,12 @@ public class main {
 		JButton divisionButton = new JButton("/");
 		divisionButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					bo.Division(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));
+					resultField.setText(Double.toString(bo.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
 			}
 		});
 		divisionButton.setBounds(103, 195, 55, 55);
@@ -127,6 +139,12 @@ public class main {
 		JButton multiplicationButton = new JButton("*");
 		multiplicationButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					bo.Multiplication(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));
+					resultField.setText(Double.toString(bo.getResult()));
+				}catch(NumberFormatException ex) {
+					resultField.setText("Syntax Error");
+				}
 			}
 		});
 		multiplicationButton.setBounds(38, 195, 55, 55);
