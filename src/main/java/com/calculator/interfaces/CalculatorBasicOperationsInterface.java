@@ -14,4 +14,3 @@ public interface CalculatorBasicOperationsInterface {
 	public void Division (double firstValue, double secondValue);
 }
 
-//git 
