@@ -1,4 +1,4 @@
-package com.calculator.testcases;
+package com.calculator.testcases.basic;
 
 import static org.junit.Assert.*;
 
