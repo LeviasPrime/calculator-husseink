@@ -1,4 +1,4 @@
-package com.calculator.testcases.advanced;
+
 
 import static org.junit.Assert.*;
 
@@ -10,21 +10,21 @@ import org.junit.Test;
 
 import com.calculator.superclasses.AdvancedOperations;
 
-public class AdvancedSineTests {
+public class AdvancedCosineTests {
 	private static final Logger LOG = Logger.getLogger(AdvancedOperations.class.getName());
 	AdvancedOperations calc = new AdvancedOperations();
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat("#.##");
 
 	@Test
-	public void testSinPostiveNumbers() {
+	public void testCosPostiveNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
-			result = Math.sin(testValue);
-			calc.Sine(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -32,15 +32,15 @@ public class AdvancedSineTests {
 	}
 	
 	@Test
-	public void testSinNegativeNumbers() {
+	public void testCosNegativeNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
 			testValue = 0 - testValue;
-			result = Math.sin(testValue);
-			calc.Sine(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -48,13 +48,13 @@ public class AdvancedSineTests {
 	}
 	
 	@Test
-	public void testSinZeros() {
+	public void testCosZeros() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
-			result = Math.sin(testValue);
-			calc.Sine(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
