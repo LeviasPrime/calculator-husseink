@@ -10,21 +10,21 @@ import org.junit.Test;
 
 import com.calculator.superclasses.AdvancedOperations;
 
-public class AdvancedSquaredTests {
+public class AdvancedLogarithmTest {
 	private static final Logger LOG = Logger.getLogger(AdvancedOperations.class.getName());
 	AdvancedOperations calc = new AdvancedOperations();
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat("#.##");
 
 	@Test
-	public void testSqrdPostiveNumbers() {
+	public void testLogPostiveNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
-			result = testValue * testValue;
-			calc.Squared(testValue);
+			result = Math.log10(testValue);
+			calc.Logarithm(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -32,15 +32,15 @@ public class AdvancedSquaredTests {
 	}
 	
 	@Test
-	public void testSqrdNegativeNumbers() {
+	public void testLogNegativeNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
 			testValue = 0 - testValue;
-			result = testValue * testValue;
-			calc.Squared(testValue);
+			result = Math.log10(testValue);
+			calc.Logarithm(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -48,13 +48,13 @@ public class AdvancedSquaredTests {
 	}
 	
 	@Test
-	public void testSqrdZeros() {
+	public void testLogZeros() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
-			result = testValue * testValue;
-			calc.Squared(testValue);
+			result = Math.log10(testValue);
+			calc.Logarithm(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);

@@ -10,7 +10,8 @@ import org.junit.Test;
 
 import com.calculator.superclasses.BasicOperations;
 
-public class BasicAdditionTests {
+public class BasicSubtractionTest {
+
 	private static final Logger LOG = Logger.getLogger(BasicOperations.class.getName());
 	BasicOperations calc = new BasicOperations();
 	Random random = new Random();
@@ -18,7 +19,7 @@ public class BasicAdditionTests {
 	
 
 	@Test
-	public void testAddPositiveNumbers() {
+	public void testSubPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -26,8 +27,8 @@ public class BasicAdditionTests {
 		for(int i = 0; i<=50; i++) {
 			firstNumber = random.nextDouble()*100;
 			secondNumber = random.nextDouble()*100;
-			result = firstNumber + secondNumber;
-			calc.Addition(firstNumber, secondNumber);
+			result = firstNumber - secondNumber;
+			calc.Subtraction(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);
@@ -35,7 +36,7 @@ public class BasicAdditionTests {
 	}
 	
 	@Test
-	public void testAddNegativeNumbers() {
+	public void testSubNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -44,8 +45,8 @@ public class BasicAdditionTests {
 			firstNumber = random.nextDouble()*100;
 			secondNumber = random.nextDouble()*100;
 			secondNumber = 0 - secondNumber;
-			result = firstNumber + secondNumber;
-			calc.Addition(firstNumber, secondNumber);
+			result = firstNumber - secondNumber;
+			calc.Subtraction(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);
@@ -53,7 +54,7 @@ public class BasicAdditionTests {
 	}
 	
 	@Test
-	public void testAddZeros() {
+	public void testSubZeros() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -61,8 +62,8 @@ public class BasicAdditionTests {
 		for(int i = 0; i<=50; i++) {
 			firstNumber = random.nextDouble()*100;
 			
-			result = firstNumber + secondNumber;
-			calc.Addition(firstNumber, secondNumber);
+			result = firstNumber - secondNumber;
+			calc.Subtraction(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);

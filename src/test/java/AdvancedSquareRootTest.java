@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.calculator.superclasses.AdvancedOperations;
 
-public class AdvancedSquareRootTests {
+public class AdvancedSquareRootTest {
 	private static final Logger LOG = Logger.getLogger(AdvancedOperations.class.getName());
 	AdvancedOperations calc = new AdvancedOperations();
 	Random random = new Random();

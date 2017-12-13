@@ -10,21 +10,21 @@ import org.junit.Test;
 
 import com.calculator.superclasses.AdvancedOperations;
 
-public class AdvancedLogarithmTests {
+public class AdvancedCosineTest {
 	private static final Logger LOG = Logger.getLogger(AdvancedOperations.class.getName());
 	AdvancedOperations calc = new AdvancedOperations();
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat("#.##");
 
 	@Test
-	public void testLogPostiveNumbers() {
+	public void testCosPostiveNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
-			result = Math.log10(testValue);
-			calc.Logarithm(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -32,15 +32,15 @@ public class AdvancedLogarithmTests {
 	}
 	
 	@Test
-	public void testLogNegativeNumbers() {
+	public void testCosNegativeNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
 			testValue = 0 - testValue;
-			result = Math.log10(testValue);
-			calc.Logarithm(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -48,13 +48,13 @@ public class AdvancedLogarithmTests {
 	}
 	
 	@Test
-	public void testLogZeros() {
+	public void testCosZeros() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
-			result = Math.log10(testValue);
-			calc.Logarithm(testValue);
+			result = Math.cos(testValue);
+			calc.Cosine(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);

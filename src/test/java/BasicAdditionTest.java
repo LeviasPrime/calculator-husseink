@@ -10,8 +10,7 @@ import org.junit.Test;
 
 import com.calculator.superclasses.BasicOperations;
 
-public class BasicDivisionTests {
-
+public class BasicAdditionTest {
 	private static final Logger LOG = Logger.getLogger(BasicOperations.class.getName());
 	BasicOperations calc = new BasicOperations();
 	Random random = new Random();
@@ -19,7 +18,7 @@ public class BasicDivisionTests {
 	
 
 	@Test
-	public void testDivPositiveNumbers() {
+	public void testAddPositiveNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -27,8 +26,8 @@ public class BasicDivisionTests {
 		for(int i = 0; i<=50; i++) {
 			firstNumber = random.nextDouble()*100;
 			secondNumber = random.nextDouble()*100;
-			result = firstNumber / secondNumber;
-			calc.Division(firstNumber, secondNumber);
+			result = firstNumber + secondNumber;
+			calc.Addition(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);
@@ -36,7 +35,7 @@ public class BasicDivisionTests {
 	}
 	
 	@Test
-	public void testDivNegativeNumbers() {
+	public void testAddNegativeNumbers() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -45,8 +44,8 @@ public class BasicDivisionTests {
 			firstNumber = random.nextDouble()*100;
 			secondNumber = random.nextDouble()*100;
 			secondNumber = 0 - secondNumber;
-			result = firstNumber / secondNumber;
-			calc.Division(firstNumber, secondNumber);
+			result = firstNumber + secondNumber;
+			calc.Addition(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);
@@ -54,7 +53,7 @@ public class BasicDivisionTests {
 	}
 	
 	@Test
-	public void testDivZeros() {
+	public void testAddZeros() {
 		double firstNumber = 0;
 		double secondNumber = 0;
 		double result = 0;
@@ -62,8 +61,8 @@ public class BasicDivisionTests {
 		for(int i = 0; i<=50; i++) {
 			firstNumber = random.nextDouble()*100;
 			
-			result = firstNumber / secondNumber;
-			calc.Division(firstNumber, secondNumber);
+			result = firstNumber + secondNumber;
+			calc.Addition(firstNumber, secondNumber);
 			
 			LOG.info("Testing method with values: " + df.format(firstNumber) + " and " + df.format(secondNumber));
 			assertEquals(calc.getResult(), result , 0);
@@ -71,5 +70,3 @@ public class BasicDivisionTests {
 	}
 
 }
-
-

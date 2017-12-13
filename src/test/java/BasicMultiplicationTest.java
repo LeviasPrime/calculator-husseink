@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.calculator.superclasses.BasicOperations;
 
-public class BasicMultiplicationTests {
+public class BasicMultiplicationTest {
 
 		private static final Logger LOG = Logger.getLogger(BasicOperations.class.getName());
 		BasicOperations calc = new BasicOperations();

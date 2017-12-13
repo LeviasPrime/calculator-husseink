@@ -10,21 +10,21 @@ import org.junit.Test;
 
 import com.calculator.superclasses.AdvancedOperations;
 
-public class AdvancedCosineTests {
+public class AdvancedTangentTest {
 	private static final Logger LOG = Logger.getLogger(AdvancedOperations.class.getName());
 	AdvancedOperations calc = new AdvancedOperations();
 	Random random = new Random();
 	DecimalFormat df = new DecimalFormat("#.##");
 
 	@Test
-	public void testCosPostiveNumbers() {
+	public void testTanPostiveNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
-			result = Math.cos(testValue);
-			calc.Cosine(testValue);
+			result = Math.tan(testValue);
+			calc.Tangent(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -32,15 +32,15 @@ public class AdvancedCosineTests {
 	}
 	
 	@Test
-	public void testCosNegativeNumbers() {
+	public void testTanNegativeNumbers() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
 			testValue = random.nextDouble()*100;
 			testValue = 0 - testValue;
-			result = Math.cos(testValue);
-			calc.Cosine(testValue);
+			result = Math.tan(testValue);
+			calc.Tangent(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
@@ -48,13 +48,13 @@ public class AdvancedCosineTests {
 	}
 	
 	@Test
-	public void testCosZeros() {
+	public void testTanZeros() {
 		double testValue = 0;
 		double result = 0;
 		
 		for (int i = 0; i<=50; i++) {
-			result = Math.cos(testValue);
-			calc.Cosine(testValue);
+			result = Math.tan(testValue);
+			calc.Tangent(testValue);
 			
 			LOG.info("Testing method with value: " + df.format(testValue));
 			assertEquals(calc.getResult(), result, 0);
