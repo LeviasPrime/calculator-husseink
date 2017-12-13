@@ -1,0 +1,15 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},38,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},38,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new Runnable() {...},16,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},38,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main,427,0,0,0,81,0,3,0,3,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},38,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.main,main.new ActionListener() {...},33,0,0,0,7,0,2,0,2,0
+calculator-husseink,com.calculator.superclasses,BasicOperations,14,43,0,0,6,15,4,7,4,7
+calculator-husseink,com.calculator.superclasses,AdvancedOperations,7,47,0,0,3,18,2,9,2,9

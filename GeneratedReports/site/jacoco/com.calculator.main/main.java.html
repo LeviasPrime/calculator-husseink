@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-husseink</a> &gt; <a href="index.source.html" class="el_package">com.calculator.main</a> &gt; <span class="el_source">main.java</span></div><h1>main.java</h1><pre class="source lang-java linenums">/**
+ * main
+ * 
+ * @author Hussein Kadhum.
+ * @version 1.0 alpha
+ **/
+
+package com.calculator.main;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+
+import com.calculator.superclasses.AdvancedOperations;
+import com.calculator.superclasses.BasicOperations;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+public class main {
+
+	private JFrame frmCalculator;
+	private JTextField firstValueField; 
+	private JTextField secondValueField; 
+	private JTextField resultField; 
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L38">		EventQueue.invokeLater(new Runnable() {</span>
+			public void run() {
+				try {
+<span class="nc" id="L41">					main window = new main();</span>
+<span class="nc" id="L42">					window.frmCalculator.setVisible(true);</span>
+<span class="nc" id="L43">				} catch (Exception e) {</span>
+<span class="nc" id="L44">					e.printStackTrace();</span>
+<span class="nc" id="L45">				}</span>
+<span class="nc" id="L46">			}</span>
+		});
+<span class="nc" id="L48">	}</span>
+
+	/**
+	 * Create the application.
+	 */
+<span class="nc" id="L53">	public main() {</span>
+<span class="nc" id="L54">		initialize();</span>
+<span class="nc" id="L55">	}</span>
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+<span class="nc" id="L61">		final BasicOperations bo = new BasicOperations();</span>
+<span class="nc" id="L62">		final AdvancedOperations ao = new AdvancedOperations();</span>
+		
+<span class="nc" id="L64">		frmCalculator = new JFrame();</span>
+<span class="nc" id="L65">		frmCalculator.setTitle(&quot;Calculator&quot;);</span>
+<span class="nc" id="L66">		frmCalculator.setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L67">		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L68">		frmCalculator.getContentPane().setLayout(null);</span>
+		
+<span class="nc" id="L70">		JLabel lblFirstValue = new JLabel(&quot;First Value or Only Value:&quot;);</span>
+<span class="nc" id="L71">		lblFirstValue.setHorizontalAlignment(SwingConstants.LEFT);</span>
+<span class="nc" id="L72">		lblFirstValue.setBackground(UIManager.getColor(&quot;Button.background&quot;));</span>
+<span class="nc" id="L73">		lblFirstValue.setBounds(10, 11, 176, 25);</span>
+<span class="nc" id="L74">		frmCalculator.getContentPane().add(lblFirstValue);</span>
+		
+<span class="nc" id="L76">		firstValueField = new JTextField();</span>
+<span class="nc" id="L77">		firstValueField.setBounds(10, 36, 176, 20);</span>
+<span class="nc" id="L78">		frmCalculator.getContentPane().add(firstValueField);</span>
+<span class="nc" id="L79">		firstValueField.setColumns(10);</span>
+		
+<span class="nc" id="L81">		JLabel lblSecondValue = new JLabel(&quot;Second Value:&quot;);</span>
+<span class="nc" id="L82">		lblSecondValue.setHorizontalAlignment(SwingConstants.LEFT);</span>
+<span class="nc" id="L83">		lblSecondValue.setBackground(SystemColor.menu);</span>
+<span class="nc" id="L84">		lblSecondValue.setBounds(10, 67, 176, 25);</span>
+<span class="nc" id="L85">		frmCalculator.getContentPane().add(lblSecondValue);</span>
+		
+<span class="nc" id="L87">		secondValueField = new JTextField();</span>
+<span class="nc" id="L88">		secondValueField.setColumns(10);</span>
+<span class="nc" id="L89">		secondValueField.setBounds(10, 92, 176, 20);</span>
+<span class="nc" id="L90">		frmCalculator.getContentPane().add(secondValueField);</span>
+		
+<span class="nc" id="L92">		JLabel lblResult = new JLabel(&quot;Result:&quot;);</span>
+<span class="nc" id="L93">		lblResult.setHorizontalAlignment(SwingConstants.LEFT);</span>
+<span class="nc" id="L94">		lblResult.setBackground(SystemColor.menu);</span>
+<span class="nc" id="L95">		lblResult.setBounds(239, 36, 176, 25);</span>
+<span class="nc" id="L96">		frmCalculator.getContentPane().add(lblResult);</span>
+		
+<span class="nc" id="L98">		resultField = new JTextField();</span>
+<span class="nc" id="L99">		resultField.setEditable(false);</span>
+<span class="nc" id="L100">		resultField.setColumns(10);</span>
+<span class="nc" id="L101">		resultField.setBounds(239, 61, 176, 20);</span>
+<span class="nc" id="L102">		frmCalculator.getContentPane().add(resultField);</span>
+		
+		
+<span class="nc" id="L105">		JButton additionButton = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L106">		additionButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L109">					bo.Addition(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));</span>
+<span class="nc" id="L110">					resultField.setText(Double.toString(bo.getResult()));</span>
+<span class="nc" id="L111">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L112">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L113">				}</span>
+<span class="nc" id="L114">			}</span>
+		});
+<span class="nc" id="L116">		additionButton.setBounds(38, 129, 55, 55);</span>
+<span class="nc" id="L117">		frmCalculator.getContentPane().add(additionButton);</span>
+		
+<span class="nc" id="L119">		JButton subtractionButton = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L120">		subtractionButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L123">					bo.Subtraction(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));</span>
+<span class="nc" id="L124">					resultField.setText(Double.toString(bo.getResult()));</span>
+<span class="nc" id="L125">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L126">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L127">				}</span>
+<span class="nc" id="L128">			}</span>
+		});
+<span class="nc" id="L130">		subtractionButton.setBounds(103, 129, 55, 55);</span>
+<span class="nc" id="L131">		frmCalculator.getContentPane().add(subtractionButton);</span>
+		
+
+		
+<span class="nc" id="L135">		JButton divisionButton = new JButton(&quot;/&quot;);</span>
+<span class="nc" id="L136">		divisionButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L139">					bo.Division(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));</span>
+<span class="nc" id="L140">					resultField.setText(Double.toString(bo.getResult()));</span>
+<span class="nc" id="L141">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L142">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L143">				}</span>
+<span class="nc" id="L144">			}</span>
+		});
+<span class="nc" id="L146">		divisionButton.setBounds(103, 195, 55, 55);</span>
+<span class="nc" id="L147">		frmCalculator.getContentPane().add(divisionButton);</span>
+		
+<span class="nc" id="L149">		JButton multiplicationButton = new JButton(&quot;*&quot;);</span>
+<span class="nc" id="L150">		multiplicationButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L153">					bo.Multiplication(Double.parseDouble(firstValueField.getText()), Double.parseDouble(secondValueField.getText()));</span>
+<span class="nc" id="L154">					resultField.setText(Double.toString(bo.getResult()));</span>
+<span class="nc" id="L155">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L156">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L157">				}</span>
+<span class="nc" id="L158">			}</span>
+		});
+<span class="nc" id="L160">		multiplicationButton.setBounds(38, 195, 55, 55);</span>
+<span class="nc" id="L161">		frmCalculator.getContentPane().add(multiplicationButton);</span>
+
+		
+<span class="nc" id="L164">		JButton rootButton = new JButton(&quot;\u221A&quot;);</span>
+<span class="nc" id="L165">		rootButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L168">					ao.SquareRoot(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L169">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L170">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L171">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L172">				}</span>
+<span class="nc" id="L173">			}</span>
+		});
+<span class="nc" id="L175">		rootButton.setBounds(369, 129, 55, 55);</span>
+<span class="nc" id="L176">		frmCalculator.getContentPane().add(rootButton);</span>
+		
+<span class="nc" id="L178">		JButton tangentButton = new JButton(&quot;tan&quot;);</span>
+<span class="nc" id="L179">		tangentButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L182">					ao.Tangent(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L183">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L184">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L185">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L186">				}</span>
+<span class="nc" id="L187">			}</span>
+		});
+<span class="nc" id="L189">		tangentButton.setBounds(369, 195, 55, 55);</span>
+<span class="nc" id="L190">		frmCalculator.getContentPane().add(tangentButton);</span>
+		
+<span class="nc" id="L192">		JButton squaredButton = new JButton(&quot;x^2&quot;);</span>
+<span class="nc" id="L193">		squaredButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L196">					ao.Squared(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L197">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L198">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L199">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L200">				}</span>
+<span class="nc" id="L201">			}</span>
+		});
+<span class="nc" id="L203">		squaredButton.setBounds(304, 129, 55, 55);</span>
+<span class="nc" id="L204">		frmCalculator.getContentPane().add(squaredButton);</span>
+		
+<span class="nc" id="L206">		JButton cosineButton = new JButton(&quot;cos&quot;);</span>
+<span class="nc" id="L207">		cosineButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L210">					ao.Cosine(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L211">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L212">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L213">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L214">				}</span>
+<span class="nc" id="L215">			}</span>
+		});
+<span class="nc" id="L217">		cosineButton.setBounds(304, 195, 55, 55);</span>
+<span class="nc" id="L218">		frmCalculator.getContentPane().add(cosineButton);</span>
+		
+<span class="nc" id="L220">		JButton logarithmButton = new JButton(&quot;log&quot;);</span>
+<span class="nc" id="L221">		logarithmButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L224">					ao.Logarithm(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L225">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L226">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L227">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L228">				}</span>
+<span class="nc" id="L229">			}</span>
+		});
+<span class="nc" id="L231">		logarithmButton.setBounds(239, 129, 55, 55);</span>
+<span class="nc" id="L232">		frmCalculator.getContentPane().add(logarithmButton);</span>
+		
+<span class="nc" id="L234">		JButton sineButton = new JButton(&quot;sin&quot;);</span>
+<span class="nc" id="L235">		sineButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc" id="L238">					ao.Sine(Double.parseDouble(firstValueField.getText()));</span>
+<span class="nc" id="L239">					resultField.setText(Double.toString(ao.getResult()));</span>
+<span class="nc" id="L240">				}catch(NumberFormatException ex) {</span>
+<span class="nc" id="L241">					resultField.setText(&quot;Syntax Error&quot;);</span>
+<span class="nc" id="L242">				}</span>
+<span class="nc" id="L243">			}</span>
+		});
+<span class="nc" id="L245">		sineButton.setBounds(239, 195, 55, 55);</span>
+<span class="nc" id="L246">		frmCalculator.getContentPane().add(sineButton);</span>
+<span class="nc" id="L247">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

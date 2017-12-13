@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BasicOperations.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-husseink</a> &gt; <a href="index.source.html" class="el_package">com.calculator.superclasses</a> &gt; <span class="el_source">BasicOperations.java</span></div><h1>BasicOperations.java</h1><pre class="source lang-java linenums">/**
+ * BasicOperations
+ * 
+ * @author Hussein Kadhum.
+ * @version 1.0 alpha
+ **/
+
+package com.calculator.superclasses;
+
+<span class="fc" id="L10">public class BasicOperations {</span>
+<span class="fc" id="L11">	private double firstValue = 0;</span>
+<span class="fc" id="L12">	private double secondValue = 0;</span>
+<span class="fc" id="L13">	private double result = 0;</span>
+	
+	
+	/**
+	 * Getter for firstValue
+	 * @return firstValue
+	 */
+	
+	public double getFirstValue() {
+<span class="nc" id="L22">		return firstValue;</span>
+	}
+	
+	
+	/**
+	 * Setter for firstValue
+	 * @param firstValue
+	 */
+	
+	public void setFirstValue(double firstValue) {
+<span class="nc" id="L32">		this.firstValue = firstValue;</span>
+<span class="nc" id="L33">	}</span>
+	
+	
+	/**
+	 * Getter for secondValue
+	 * @return secondValue
+	 */
+	public double getSecondValue() {
+<span class="nc" id="L41">		return secondValue;</span>
+	}
+	
+	
+	/**
+	 * Setter for secondValue
+	 * @param secondValue
+	 */
+	
+	public void setSecondValue(double secondValue) {
+<span class="nc" id="L51">		this.secondValue = secondValue;</span>
+<span class="nc" id="L52">	}</span>
+	
+	
+	/**
+	 * Getter for result
+	 * @return result
+	 */
+	public double getResult() {
+<span class="fc" id="L60">		return result;</span>
+	}
+	
+
+	/**
+	 * Setter for result
+	 * @param result
+	 */
+	public void setResult(double result) {
+<span class="fc" id="L69">		this.result = result;</span>
+<span class="fc" id="L70">	}</span>
+	
+	
+	
+	/**
+	 * Method to add two values
+	 * @param firstValue
+	 * @param secondValue
+	 */
+	public void Addition (double firstValue, double secondValue) {
+<span class="fc" id="L80">		setResult(firstValue + secondValue);</span>
+<span class="fc" id="L81">	}</span>
+	
+	
+	/**
+	 * Method to subtract two values
+	 * @param firstValue
+	 * @param secondValue
+	 */
+	public void Subtraction (double firstValue, double secondValue) {
+<span class="fc" id="L90">		setResult(firstValue - secondValue);</span>
+<span class="fc" id="L91">	}</span>
+	
+	
+	/**
+	 * Method to multiply two values
+	 * @param firstValue
+	 * @param secondValue
+	 */
+	public void Multiplication (double firstValue, double secondValue) {
+<span class="fc" id="L100">		setResult(firstValue * secondValue);</span>
+<span class="fc" id="L101">	}</span>
+	
+	
+	/**
+	 * Method to divide two values
+	 * @param firstValue
+	 * @param secondValue
+	 */
+	public void Division (double firstValue, double secondValue) {
+<span class="fc" id="L110">		setResult(firstValue / secondValue);</span>
+<span class="fc" id="L111">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

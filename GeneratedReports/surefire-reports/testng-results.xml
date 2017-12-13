@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="30" passed="30">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1113" started-at="2017-12-13T15:00:30Z" finished-at="2017-12-13T15:00:31Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1113" started-at="2017-12-13T15:00:30Z" finished-at="2017-12-13T15:00:31Z">
+      <class name="BasicAdditionTest">
+        <test-method status="PASS" signature="testAddZeros()[pri:0, instance:testAddZeros(BasicAdditionTest)]" name="testAddZeros" duration-ms="4" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddZeros -->
+        <test-method status="PASS" signature="testAddPositiveNumbers()[pri:0, instance:testAddPositiveNumbers(BasicAdditionTest)]" name="testAddPositiveNumbers" duration-ms="4" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPositiveNumbers -->
+        <test-method status="PASS" signature="testAddNegativeNumbers()[pri:0, instance:testAddNegativeNumbers(BasicAdditionTest)]" name="testAddNegativeNumbers" duration-ms="7" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNegativeNumbers -->
+      </class> <!-- BasicAdditionTest -->
+      <class name="AdvancedTangentTest">
+        <test-method status="PASS" signature="testTanZeros()[pri:0, instance:testTanZeros(AdvancedTangentTest)]" name="testTanZeros" duration-ms="18" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanZeros -->
+        <test-method status="PASS" signature="testTanNegativeNumbers()[pri:0, instance:testTanNegativeNumbers(AdvancedTangentTest)]" name="testTanNegativeNumbers" duration-ms="18" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanNegativeNumbers -->
+        <test-method status="PASS" signature="testTanPostiveNumbers()[pri:0, instance:testTanPostiveNumbers(AdvancedTangentTest)]" name="testTanPostiveNumbers" duration-ms="11" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanPostiveNumbers -->
+      </class> <!-- AdvancedTangentTest -->
+      <class name="AdvancedCosineTest">
+        <test-method status="PASS" signature="testCosZeros()[pri:0, instance:testCosZeros(AdvancedCosineTest)]" name="testCosZeros" duration-ms="42" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosZeros -->
+        <test-method status="PASS" signature="testCosNegativeNumbers()[pri:0, instance:testCosNegativeNumbers(AdvancedCosineTest)]" name="testCosNegativeNumbers" duration-ms="24" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosNegativeNumbers -->
+        <test-method status="PASS" signature="testCosPostiveNumbers()[pri:0, instance:testCosPostiveNumbers(AdvancedCosineTest)]" name="testCosPostiveNumbers" duration-ms="16" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosPostiveNumbers -->
+      </class> <!-- AdvancedCosineTest -->
+      <class name="AdvancedSquareRootTest">
+        <test-method status="PASS" signature="testSqrtZeros()[pri:0, instance:testSqrtZeros(AdvancedSquareRootTest)]" name="testSqrtZeros" duration-ms="12" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtZeros -->
+        <test-method status="PASS" signature="testSqrtPostiveNumbers()[pri:0, instance:testSqrtPostiveNumbers(AdvancedSquareRootTest)]" name="testSqrtPostiveNumbers" duration-ms="22" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtPostiveNumbers -->
+        <test-method status="PASS" signature="testSqrtNegativeNumbers()[pri:0, instance:testSqrtNegativeNumbers(AdvancedSquareRootTest)]" name="testSqrtNegativeNumbers" duration-ms="7" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtNegativeNumbers -->
+      </class> <!-- AdvancedSquareRootTest -->
+      <class name="AdvancedSquaredTest">
+        <test-method status="PASS" signature="testSqrdZeros()[pri:0, instance:testSqrdZeros(AdvancedSquaredTest)]" name="testSqrdZeros" duration-ms="21" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrdZeros -->
+        <test-method status="PASS" signature="testSqrdNegativeNumbers()[pri:0, instance:testSqrdNegativeNumbers(AdvancedSquaredTest)]" name="testSqrdNegativeNumbers" duration-ms="10" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrdNegativeNumbers -->
+        <test-method status="PASS" signature="testSqrdPostiveNumbers()[pri:0, instance:testSqrdPostiveNumbers(AdvancedSquaredTest)]" name="testSqrdPostiveNumbers" duration-ms="15" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrdPostiveNumbers -->
+      </class> <!-- AdvancedSquaredTest -->
+      <class name="AdvancedLogarithmTest">
+        <test-method status="PASS" signature="testLogNegativeNumbers()[pri:0, instance:testLogNegativeNumbers(AdvancedLogarithmTest)]" name="testLogNegativeNumbers" duration-ms="42" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogNegativeNumbers -->
+        <test-method status="PASS" signature="testLogZeros()[pri:0, instance:testLogZeros(AdvancedLogarithmTest)]" name="testLogZeros" duration-ms="16" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogZeros -->
+        <test-method status="PASS" signature="testLogPostiveNumbers()[pri:0, instance:testLogPostiveNumbers(AdvancedLogarithmTest)]" name="testLogPostiveNumbers" duration-ms="5" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogPostiveNumbers -->
+      </class> <!-- AdvancedLogarithmTest -->
+      <class name="AdvancedSineTest">
+        <test-method status="PASS" signature="testSinNegativeNumbers()[pri:0, instance:testSinNegativeNumbers(AdvancedSineTest)]" name="testSinNegativeNumbers" duration-ms="8" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinNegativeNumbers -->
+        <test-method status="PASS" signature="testSinPostiveNumbers()[pri:0, instance:testSinPostiveNumbers(AdvancedSineTest)]" name="testSinPostiveNumbers" duration-ms="13" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinPostiveNumbers -->
+        <test-method status="PASS" signature="testSinZeros()[pri:0, instance:testSinZeros(AdvancedSineTest)]" name="testSinZeros" duration-ms="6" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinZeros -->
+      </class> <!-- AdvancedSineTest -->
+      <class name="BasicMultiplicationTest">
+        <test-method status="PASS" signature="testMulPositiveNumbers()[pri:0, instance:testMulPositiveNumbers(BasicMultiplicationTest)]" name="testMulPositiveNumbers" duration-ms="21" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMulPositiveNumbers -->
+        <test-method status="PASS" signature="testMulNegativeNumbers()[pri:0, instance:testMulNegativeNumbers(BasicMultiplicationTest)]" name="testMulNegativeNumbers" duration-ms="46" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMulNegativeNumbers -->
+        <test-method status="PASS" signature="testMulZeros()[pri:0, instance:testMulZeros(BasicMultiplicationTest)]" name="testMulZeros" duration-ms="4" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMulZeros -->
+      </class> <!-- BasicMultiplicationTest -->
+      <class name="BasicSubtractionTest">
+        <test-method status="PASS" signature="testSubZeros()[pri:0, instance:testSubZeros(BasicSubtractionTest)]" name="testSubZeros" duration-ms="15" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubZeros -->
+        <test-method status="PASS" signature="testSubPositiveNumbers()[pri:0, instance:testSubPositiveNumbers(BasicSubtractionTest)]" name="testSubPositiveNumbers" duration-ms="24" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubPositiveNumbers -->
+        <test-method status="PASS" signature="testSubNegativeNumbers()[pri:0, instance:testSubNegativeNumbers(BasicSubtractionTest)]" name="testSubNegativeNumbers" duration-ms="13" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubNegativeNumbers -->
+      </class> <!-- BasicSubtractionTest -->
+      <class name="BasicDivisionTest">
+        <test-method status="PASS" signature="testDivPositiveNumbers()[pri:0, instance:testDivPositiveNumbers(BasicDivisionTest)]" name="testDivPositiveNumbers" duration-ms="4" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivPositiveNumbers -->
+        <test-method status="PASS" signature="testDivNegativeNumbers()[pri:0, instance:testDivNegativeNumbers(BasicDivisionTest)]" name="testDivNegativeNumbers" duration-ms="9" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivNegativeNumbers -->
+        <test-method status="PASS" signature="testDivZeros()[pri:0, instance:testDivZeros(BasicDivisionTest)]" name="testDivZeros" duration-ms="4" started-at="2017-12-13T16:00:31Z" finished-at="2017-12-13T16:00:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivZeros -->
+      </class> <!-- BasicDivisionTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

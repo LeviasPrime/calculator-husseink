@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 13 16:00:30 CET 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1113 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='BasicAdditionTest.testAddNegativeNumbers()'><b>testAddNegativeNumbers</b><br>Test class: BasicAdditionTest</td>
+<td></td>
+<td>0</td>
+<td>testAddNegativeNumbers(BasicAdditionTest)</td></tr>
+<tr>
+<td title='BasicAdditionTest.testAddPositiveNumbers()'><b>testAddPositiveNumbers</b><br>Test class: BasicAdditionTest</td>
+<td></td>
+<td>0</td>
+<td>testAddPositiveNumbers(BasicAdditionTest)</td></tr>
+<tr>
+<td title='BasicAdditionTest.testAddZeros()'><b>testAddZeros</b><br>Test class: BasicAdditionTest</td>
+<td></td>
+<td>0</td>
+<td>testAddZeros(BasicAdditionTest)</td></tr>
+<tr>
+<td title='AdvancedCosineTest.testCosNegativeNumbers()'><b>testCosNegativeNumbers</b><br>Test class: AdvancedCosineTest</td>
+<td></td>
+<td>0</td>
+<td>testCosNegativeNumbers(AdvancedCosineTest)</td></tr>
+<tr>
+<td title='AdvancedCosineTest.testCosPostiveNumbers()'><b>testCosPostiveNumbers</b><br>Test class: AdvancedCosineTest</td>
+<td></td>
+<td>0</td>
+<td>testCosPostiveNumbers(AdvancedCosineTest)</td></tr>
+<tr>
+<td title='AdvancedCosineTest.testCosZeros()'><b>testCosZeros</b><br>Test class: AdvancedCosineTest</td>
+<td></td>
+<td>0</td>
+<td>testCosZeros(AdvancedCosineTest)</td></tr>
+<tr>
+<td title='BasicDivisionTest.testDivNegativeNumbers()'><b>testDivNegativeNumbers</b><br>Test class: BasicDivisionTest</td>
+<td></td>
+<td>0</td>
+<td>testDivNegativeNumbers(BasicDivisionTest)</td></tr>
+<tr>
+<td title='BasicDivisionTest.testDivPositiveNumbers()'><b>testDivPositiveNumbers</b><br>Test class: BasicDivisionTest</td>
+<td></td>
+<td>0</td>
+<td>testDivPositiveNumbers(BasicDivisionTest)</td></tr>
+<tr>
+<td title='BasicDivisionTest.testDivZeros()'><b>testDivZeros</b><br>Test class: BasicDivisionTest</td>
+<td></td>
+<td>0</td>
+<td>testDivZeros(BasicDivisionTest)</td></tr>
+<tr>
+<td title='AdvancedLogarithmTest.testLogNegativeNumbers()'><b>testLogNegativeNumbers</b><br>Test class: AdvancedLogarithmTest</td>
+<td></td>
+<td>0</td>
+<td>testLogNegativeNumbers(AdvancedLogarithmTest)</td></tr>
+<tr>
+<td title='AdvancedLogarithmTest.testLogPostiveNumbers()'><b>testLogPostiveNumbers</b><br>Test class: AdvancedLogarithmTest</td>
+<td></td>
+<td>0</td>
+<td>testLogPostiveNumbers(AdvancedLogarithmTest)</td></tr>
+<tr>
+<td title='AdvancedLogarithmTest.testLogZeros()'><b>testLogZeros</b><br>Test class: AdvancedLogarithmTest</td>
+<td></td>
+<td>0</td>
+<td>testLogZeros(AdvancedLogarithmTest)</td></tr>
+<tr>
+<td title='BasicMultiplicationTest.testMulNegativeNumbers()'><b>testMulNegativeNumbers</b><br>Test class: BasicMultiplicationTest</td>
+<td></td>
+<td>0</td>
+<td>testMulNegativeNumbers(BasicMultiplicationTest)</td></tr>
+<tr>
+<td title='BasicMultiplicationTest.testMulPositiveNumbers()'><b>testMulPositiveNumbers</b><br>Test class: BasicMultiplicationTest</td>
+<td></td>
+<td>0</td>
+<td>testMulPositiveNumbers(BasicMultiplicationTest)</td></tr>
+<tr>
+<td title='BasicMultiplicationTest.testMulZeros()'><b>testMulZeros</b><br>Test class: BasicMultiplicationTest</td>
+<td></td>
+<td>0</td>
+<td>testMulZeros(BasicMultiplicationTest)</td></tr>
+<tr>
+<td title='AdvancedSineTest.testSinNegativeNumbers()'><b>testSinNegativeNumbers</b><br>Test class: AdvancedSineTest</td>
+<td></td>
+<td>0</td>
+<td>testSinNegativeNumbers(AdvancedSineTest)</td></tr>
+<tr>
+<td title='AdvancedSineTest.testSinPostiveNumbers()'><b>testSinPostiveNumbers</b><br>Test class: AdvancedSineTest</td>
+<td></td>
+<td>0</td>
+<td>testSinPostiveNumbers(AdvancedSineTest)</td></tr>
+<tr>
+<td title='AdvancedSineTest.testSinZeros()'><b>testSinZeros</b><br>Test class: AdvancedSineTest</td>
+<td></td>
+<td>0</td>
+<td>testSinZeros(AdvancedSineTest)</td></tr>
+<tr>
+<td title='AdvancedSquaredTest.testSqrdNegativeNumbers()'><b>testSqrdNegativeNumbers</b><br>Test class: AdvancedSquaredTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrdNegativeNumbers(AdvancedSquaredTest)</td></tr>
+<tr>
+<td title='AdvancedSquaredTest.testSqrdPostiveNumbers()'><b>testSqrdPostiveNumbers</b><br>Test class: AdvancedSquaredTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrdPostiveNumbers(AdvancedSquaredTest)</td></tr>
+<tr>
+<td title='AdvancedSquaredTest.testSqrdZeros()'><b>testSqrdZeros</b><br>Test class: AdvancedSquaredTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrdZeros(AdvancedSquaredTest)</td></tr>
+<tr>
+<td title='AdvancedSquareRootTest.testSqrtNegativeNumbers()'><b>testSqrtNegativeNumbers</b><br>Test class: AdvancedSquareRootTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtNegativeNumbers(AdvancedSquareRootTest)</td></tr>
+<tr>
+<td title='AdvancedSquareRootTest.testSqrtPostiveNumbers()'><b>testSqrtPostiveNumbers</b><br>Test class: AdvancedSquareRootTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtPostiveNumbers(AdvancedSquareRootTest)</td></tr>
+<tr>
+<td title='AdvancedSquareRootTest.testSqrtZeros()'><b>testSqrtZeros</b><br>Test class: AdvancedSquareRootTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtZeros(AdvancedSquareRootTest)</td></tr>
+<tr>
+<td title='BasicSubtractionTest.testSubNegativeNumbers()'><b>testSubNegativeNumbers</b><br>Test class: BasicSubtractionTest</td>
+<td></td>
+<td>0</td>
+<td>testSubNegativeNumbers(BasicSubtractionTest)</td></tr>
+<tr>
+<td title='BasicSubtractionTest.testSubPositiveNumbers()'><b>testSubPositiveNumbers</b><br>Test class: BasicSubtractionTest</td>
+<td></td>
+<td>0</td>
+<td>testSubPositiveNumbers(BasicSubtractionTest)</td></tr>
+<tr>
+<td title='BasicSubtractionTest.testSubZeros()'><b>testSubZeros</b><br>Test class: BasicSubtractionTest</td>
+<td></td>
+<td>0</td>
+<td>testSubZeros(BasicSubtractionTest)</td></tr>
+<tr>
+<td title='AdvancedTangentTest.testTanNegativeNumbers()'><b>testTanNegativeNumbers</b><br>Test class: AdvancedTangentTest</td>
+<td></td>
+<td>0</td>
+<td>testTanNegativeNumbers(AdvancedTangentTest)</td></tr>
+<tr>
+<td title='AdvancedTangentTest.testTanPostiveNumbers()'><b>testTanPostiveNumbers</b><br>Test class: AdvancedTangentTest</td>
+<td></td>
+<td>0</td>
+<td>testTanPostiveNumbers(AdvancedTangentTest)</td></tr>
+<tr>
+<td title='AdvancedTangentTest.testTanZeros()'><b>testTanZeros</b><br>Test class: AdvancedTangentTest</td>
+<td></td>
+<td>0</td>
+<td>testTanZeros(AdvancedTangentTest)</td></tr>
+</table><p>
+</body>
+</html>
